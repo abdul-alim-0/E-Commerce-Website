@@ -23,8 +23,28 @@ html{
     overflow-x: hidden;
 }
 
+/* ==== global utility ==== */
+section{
+    padding: 2rem 9%;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background: var(--pink);
+}
 
-/* header section */
+
+
+
+/* ========== header section ========== */
 header{
     position: fixed;
     top: 0;
@@ -63,8 +83,6 @@ header .icons a:hover{
     color: var(--pink);
 }
 
-
-
 header #toggler{
     display: none;
 }
@@ -77,11 +95,44 @@ header .fa-bars{
     border: 1px solid rgba(0,0,0,0.3);
     display: none;
 }
+/* ========== header section end ========== */
+
+
+
+/* ========== home section start ========= */
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./assets/image/bg.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.home .content{
+    min-width: 50rem;
+}
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+}
+.home .content span{
+    font-size: 3.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.home .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
 
 
 
 
-/* media queries */
+
+/* ========= media queries ============= */
 @media screen and (max-width:991px) {
     html{
         font-size: 55%;
@@ -89,9 +140,17 @@ header .fa-bars{
     header{
         padding: 2rem;
     }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background-position: left;
+    }
 }
 
 @media screen and (max-width:768px){
+
+    /* ========= header section ======= */
     header .fa-bars{
         display: block;
     }
@@ -113,6 +172,12 @@ header .fa-bars{
         background: #fff;
         border: .1rem solid rgba(0,0,0,0.1);
         display: block;
+    }
+    .home .content h3{
+        font-size: 5rem;
+    }
+    .home .content span{
+        font-size: 2.5rem;
     }
 }
 
